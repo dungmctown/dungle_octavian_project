@@ -1,0 +1,19 @@
+.partner {
+  margin-bottom: 150px;
+  &-main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 90px 0;
+  }
+  &-item {
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity 0.2s linear;
+    &:hover {
+      opacity: 0.4;
+    }
+  }
+}

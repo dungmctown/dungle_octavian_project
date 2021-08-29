@@ -16,4 +16,20 @@
       opacity: 0.4;
     }
   }
+  @include maxW(1023px) {
+    margin-bottom: 100px;
+    &-main {
+      gap: 50px 0;
+    }
+    &-item {
+      padding: 0 25px;
+    }
+  }
+  @include maxW(767px) {
+    margin-bottom: 50px;
+    &-main {
+      gap: 40px 0;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
 }

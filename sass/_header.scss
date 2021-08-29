@@ -19,3 +19,17 @@
   align-items: center;
   gap: 0 60px;
 }
+@include maxW(1023px) {
+  .header {
+    margin-bottom: 20px;
+  }
+  .header-phone {
+    display: none;
+  }
+  .navigation {
+    gap: 0 25px;
+  }
+  .header-main {
+    padding: 20px 0;
+  }
+}

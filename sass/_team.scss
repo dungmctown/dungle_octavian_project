@@ -5,11 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-  &-content {
-    width: 100%;
-    max-width: 370px;
-    flex-shrink: 0;
+    gap: 0 30px;
   }
 
   &-imgs {
@@ -26,5 +22,25 @@
   }
   &-img3 {
     display: block;
+  }
+  @include minW(1024px) {
+    &-content {
+      width: 100%;
+      max-width: 370px;
+      flex-shrink: 0;
+    }
+  }
+  @include maxW(1023px) {
+    padding: 100px 0;
+    &-main {
+      flex-direction: column;
+      gap: 60px 0;
+    }
+  }
+  @include maxW(767px) {
+    padding: 50px 0;
+    &.blog-desc {
+      margin-bottom: 30px;
+    }
   }
 }

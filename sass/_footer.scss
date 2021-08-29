@@ -80,4 +80,27 @@
     right: 0;
     transform: translateY(-50%);
   }
+  @include maxW(1023px) {
+    &-top {
+      padding: 100px 0;
+    }
+    &-main {
+      gap: 0 50px;
+    }
+    &-info {
+      line-height: 1.6;
+    }
+    .social {
+      gap: 0 30px;
+    }
+  }
+  @include maxW(767px) {
+    &-top {
+      padding: 50px 0;
+    }
+    &-main {
+      grid-template-columns: 1fr;
+      gap: 30px 0;
+    }
+  }
 }

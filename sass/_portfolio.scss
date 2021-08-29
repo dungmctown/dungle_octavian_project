@@ -28,4 +28,29 @@
     left: 50%;
     transform: translateX(-50%);
   }
+  @include maxW(1023px) {
+    margin-bottom: 100px;
+    &-list {
+      gap: 0 20px;
+      margin-bottom: 45px;
+    }
+    &-column {
+      gap: 40px 0;
+    }
+  }
+  @include maxW(767px) {
+    margin-bottom: 50px;
+    &-list {
+      grid-template-columns: 1fr;
+      gap: 40px 0;
+    }
+    &-img {
+      margin-bottom: 10px;
+    }
+    &-img img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
 }

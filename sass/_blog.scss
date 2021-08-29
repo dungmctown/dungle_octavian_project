@@ -10,10 +10,25 @@
   &-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 0 30px;
+    gap: 30px 30px;
   }
   &-img {
     margin-bottom: 40px;
     display: block;
+  }
+  @include maxW(1023px) {
+    padding: 100px 0;
+    &-header {
+      margin-bottom: 50px;
+    }
+  }
+  @include maxW(767px) {
+    padding: 50px 0;
+    &-header {
+      margin-bottom: 30px;
+    }
+    &-list {
+      grid-template-columns: 1fr;
+    }
   }
 }

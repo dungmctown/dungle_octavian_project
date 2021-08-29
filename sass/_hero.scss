@@ -1,18 +1,22 @@
 .hero {
   color: $gray;
   margin-bottom: 200px;
+  position: relative;
   &-img {
     margin-left: auto;
+    max-width: 65%;
   }
   &-content {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     z-index: 2;
+    left: 20%;
   }
   &-caption {
     font-size: 72px;
     font-weight: 600;
+    margin-bottom: 5px;
   }
   &-heading {
     font-weight: 800;
@@ -26,5 +30,33 @@
     text-decoration: underline;
     display: inline-block;
     font-weight: 600;
+  }
+  @include maxW(1023px) {
+    margin-bottom: 100px;
+    &-caption {
+      font-size: 40px;
+    }
+    &-heading {
+      font-size: 100px;
+    }
+  }
+  @include maxW(767px) {
+    margin-bottom: 50px;
+    &-content {
+      left: 15px;
+    }
+    &-caption {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    &-heading {
+      font-size: 40px;
+    }
+    &-link {
+      font-size: 16px;
+    }
+    &-img {
+      min-width: 75%;
+    }
   }
 }
